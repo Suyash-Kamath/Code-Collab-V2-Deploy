@@ -1,0 +1,127 @@
+/* Base Styles */
+:root {
+    /* Light theme base colors */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --primary: 210 100% 50%;
+    --secondary: 210 40% 96%;
+    --muted: 210 40% 96%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --radius: 0.5rem;
+  
+    /* Dark theme base colors */
+    --dark-background: 222 47% 11%;
+    --dark-foreground: 210 40% 98%;
+    --dark-primary: 210 100% 50%;
+    --dark-secondary: 217 33% 18%;
+    --dark-muted: 217 33% 18%;
+    --dark-border: 217 33% 18%;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark mode colors */
+      --background: var(--dark-background);
+      --foreground: var(--dark-foreground);
+      --primary: var(--dark-primary);
+      --secondary: var(--dark-secondary);
+      --muted: var(--dark-muted);
+      --border: var(--dark-border);
+    }
+  }
+  
+  /* Apply background and text colors globally */
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Space Grotesk", sans-serif;
+    transition: all 0.3s ease-in-out; /* Smooth transition between themes */
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: var(--background);
+    color: var(--foreground);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+    color: var(--foreground);
+    text-decoration: none;
+  }
+  
+  /* Navbar Link Hover Styling */
+  header a:hover {
+    color: var(--primary);
+  }
+  
+  /* General button styles */
+  button, .btn {
+    background-color: var(--primary);
+    color: var(--foreground);
+    padding: 10px 15px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: var(--primary);
+    opacity: 0.9;
+  }
+  
+  /* Glass Card Effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+  
+  /* Text Wrapping Fix */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Mobile and Desktop Navigation Links */
+  .text-nav {
+    color: var(--foreground);
+    text-decoration: none;
+  }
+  
+  .text-nav:hover {
+    color: var(--primary);
+  }
+  
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
