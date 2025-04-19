@@ -1,5 +1,5 @@
 {
-	"name": "Code Collab-server",
+	"name": "code-collab-server",
 	"version": "1.0.0",
 	"description": "",
 	"main": "dist/server.js",
@@ -11,6 +11,9 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
+	"engines": {
+		"node": "18.x"
+	  },
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^16.5.0",
