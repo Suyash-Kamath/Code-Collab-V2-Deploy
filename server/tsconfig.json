@@ -1,18 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "types": ["node"],
-    "typeRoots": ["./node_modules/@types"]
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
-}
+	"compilerOptions": {
+	  "target": "ES2020",                      // Use modern JS features, but safe for most environments
+	  "module": "CommonJS",                    // Standard for Node.js
+	  "lib": ["ES2020"],                       // Core JS libraries (no browser APIs like DOM)
+	  "outDir": "./dist",                      // Compiled JS output
+	  "rootDir": "./src",                      // Your source TS code
+	  "strict": true,                          // Enables all strict type-checking options
+	  "esModuleInterop": true,                 // Allow default imports from CommonJS modules
+	  "moduleResolution": "node",              // Resolve modules like Node.js
+	  "resolveJsonModule": true,               // Allows importing `.json` files
+	  "skipLibCheck": true,                    // Skip type checking of declaration files
+	  "forceConsistentCasingInFileNames": true,// Avoid case mismatch issues (esp. on Linux/CI)
+	  "noImplicitAny": true,                   // Prevents untyped variables
+	  "strictNullChecks": true,                // Avoid issues with null/undefined
+	  "noEmitOnError": true,                   // Don’t compile if there's a TypeScript error
+	  "types": ["node"],                       // Pull Node.js types from @types/node
+	  "typeRoots": ["./node_modules/@types"],  // Where TypeScript should look for type definitions
+	  "allowSyntheticDefaultImports": true     // Makes import syntax easier
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"]
+  }
+  
