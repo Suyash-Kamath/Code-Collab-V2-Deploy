@@ -9,8 +9,8 @@ const VideoCall = () => {
     console.log(users[0]?.username) // Access the first user's username if it exists
     const { roomId } = useParams();
     const myMeeting = async(element: HTMLDivElement | null) => {
-        const appID = 26539423;
-        const serverSecret = "2e99a5ef6e97c32e6b831afa07ded799";
+        const appID = 1437060089;
+        const serverSecret = "59ba6fa86880690eda9c1180a894d4d7";
         const kitToken =  ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomId as string, 
         Date.now().toString(), username
 
