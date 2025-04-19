@@ -1,19 +1,18 @@
 {
 	"compilerOptions": {
-	  "target": "ES2020",
-	  "module": "CommonJS",
+	  "target": "ES6",
+	  "module": "commonjs",  // Use commonjs for Node.js compatibility
 	  "strict": true,
 	  "esModuleInterop": true,
 	  "skipLibCheck": true,
-	  "outDir": "./dist",
-	  "sourceMap": true,          // For debugging with source maps
-	  "baseUrl": "./src",         // To avoid relative import paths like ../../../
-	  "paths": {
-		"*": ["node_modules/*", "src/types/*"] // Custom paths for types or modules
-	  },
-	  "resolveJsonModule": true   // If you're working with JSON files
+	  "forceConsistentCasingInFileNames": true,
+	  "outDir": "./dist",   // Output directory for compiled files
+	  "typeRoots": [
+		"./node_modules/@types",
+		"./types"
+	  ]
 	},
-	"include": ["src"],
+	"include": ["src/**/*"],
 	"exclude": ["node_modules"]
   }
   
