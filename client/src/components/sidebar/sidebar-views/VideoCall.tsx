@@ -35,5 +35,4 @@ const VideoCall = () => {
         </div>
     )
 }
-
 export default VideoCall;
