@@ -1,7 +1,6 @@
 import SplitterComponent from "@/components/SplitterComponent"
 import ConnectionStatusPage from "@/components/connection/ConnectionStatusPage"
 import Sidebar from "@/components/sidebar/Sidebar"
-import VideoCall from "@/components/sidebar/sidebar-views/VideoCall"
 import WorkSpace from "@/components/workspace"
 import { useAppContext } from "@/context/AppContext"
 import { useSocket } from "@/context/SocketContext"
@@ -10,9 +9,9 @@ import useUserActivity from "@/hooks/useUserActivity"
 import { SocketEvent } from "@/types/socket"
 import { USER_STATUS, User } from "@/types/user"
 import { useEffect } from "react"
-import Draggable from "react-draggable"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
-
+import VideoCall from "@/components/sidebar/sidebar-views/VideoCall"
+import Draggable from "react-draggable"
 function EditorPage() {
     // Listen user online/offline status
     useUserActivity()
@@ -52,7 +51,7 @@ function EditorPage() {
     return (
         <SplitterComponent>
             <Sidebar />
-            <WorkSpace />
+            <WorkSpace/>
             <Draggable>
                 <div className=" absolute z-50 h-[200px] w-[200px] border-t border-darkHover bg-dark text-white">
                     <div className="flex h-full w-full flex-col items-center justify-center">
